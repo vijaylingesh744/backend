@@ -1,0 +1,11 @@
+/client-app/node_modules
+/client-app/build
+/backend/node_modules
+/backend/uploads
+/admin-app/node_modules
+/admin-app/build
+client-app
+client-app/
+connect-website
+connect-website/
+client-app

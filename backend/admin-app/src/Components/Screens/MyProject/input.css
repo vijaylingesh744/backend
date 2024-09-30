@@ -1,0 +1,47 @@
+.outlined-input {
+    position: relative;
+}
+
+.outlined-input input {
+    color: black;
+    height: 2.5rem;
+    padding-left: 20px;
+    font-size: 15px;
+}
+.outlined-input select {
+    color: black;
+    height: 2.5rem;
+    padding-left: 20px;
+    font-size: 15px;
+    width: 100%;
+}
+
+.outlined-input label {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    background-color: white;
+    color: var(--placeholder);
+    text-align: center;
+    transition: .5s var(--main-ease);
+    font-size: var(--content1);
+    pointer-events: none;
+    padding: 0px 5px;
+}
+.outlined-input input:not(:placeholder-shown) ~ label,
+.outlined-input input:focus ~ label {
+    top: 0px;
+    left: 25px;
+    font-size: var(--content2);
+}
+.outlined-input select:not(:placeholder-shown) ~ label,
+.outlined-input select:focus ~ label {
+    top: 0px;
+    left: 25px;
+    font-size: var(--content2);
+}
+.outlined-input input:focus ~ label {
+    color: #8AC53F !important;
+    transition: 0.5s ease;
+}

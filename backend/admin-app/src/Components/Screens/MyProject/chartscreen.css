@@ -1,0 +1,350 @@
+.background{
+    background-color: #ffffff;box-shadow: 0px 4px 4px 0px #A2A2A240;
+}
+.background2 img{
+    position: relative;top: 10px;
+}
+.background1{
+    background: #F6FFFF;
+    cursor: pointer;
+}
+.background2,.background4{
+    cursor: pointer;
+    background-color: #ffffff;
+}
+.background3{
+    cursor: pointer;
+    background: #2D2B70;
+}
+.background input{
+    height: 50px;
+    width: 70%;
+    background-color:#F6FFFF ;
+    border: none !important;
+}
+.inputback{
+    background-color: #F6FFFF;
+    border-radius: 25px;
+}
+.chattime{
+font-size: 10px;font-weight: 500;line-height: 12px;letter-spacing: 0em;text-align: center;color: #b8b8b8;
+}
+.chat{
+font-size: 18px;font-weight: 700;line-height: 22px;letter-spacing: 0em;text-align: left;
+}
+.chats{
+font-size: 18px;font-weight: 700;line-height: 22px;letter-spacing: 0em;text-align: left;
+}
+.chatname{
+font-size: 14px;font-weight: 500;line-height: 17px;letter-spacing: 0.02em;text-align: left;
+}
+.chatactive{
+font-size: 10px;font-weight: 400;line-height: 12px;letter-spacing: 0em;text-align: left;color: #A5A5A5;
+}
+.column-gap-2 {
+    column-gap: 10px;
+}
+.column-gap-3 {
+    column-gap: 20px;
+}
+.gap{
+    row-gap: 8px;
+}
+.gap1{
+    row-gap: 5px;
+}
+.mt-3 span:nth-child(1) {
+font-size: 10px;font-weight: 600;line-height: 12px;letter-spacing: 0.03em;text-align: left;
+}
+.mt-3 span:nth-child(2),
+.mt-3 span:nth-child(3) {
+font-family: Inter;font-size: 10px;font-weight: 600;line-height: 12px;letter-spacing: 0.03em;text-align: left;
+}
+.msgname{
+font-size: 12px;font-weight: 600;line-height: 15px;letter-spacing: 0.02em;text-align: left;color: #B7B7B7;
+}
+.msgname1{
+font-size: 12px;font-weight: 600;line-height: 15px;letter-spacing: 0em;text-align: left;color: #000000;
+    }
+.msgname span{
+font-size: 12px;font-weight: 600;line-height: 15px;letter-spacing: 0.02em;text-align: left;color: #8AC53F;
+}
+.msgtext{
+font-size: 10px;font-weight: 600;line-height: 12px;letter-spacing: 0.02em;text-align: left;color: #3D3D3D;
+}
+.msgtext1{
+font-size: 10px;font-weight: 400;line-height: 12px;letter-spacing: 0em;text-align: left;color: #808080;
+}
+.msgtext span{
+font-size: 10px;font-weight: 600;line-height: 12px;letter-spacing: 0.02em;text-align: left;color: #C3C3C3;
+}
+.follow{
+    width: 51px;height: 20px;border-radius: 2px;float: right;background: #8AC53F;color: #ffffff;border: none;
+font-size: 10px;font-weight: 400;line-height: 12px;letter-spacing: 0em;text-align: left;
+}
+.chatinput{
+    border: none !important;
+}
+.chatinput:focus{
+    border: none !important;
+}
+.name2{
+font-size: 10px;font-weight: 400;line-height: 12px;letter-spacing: 0.02em;text-align: left;color: #A8A8A8;width: max-content;
+}
+.name1{
+font-size: 12px;font-weight: 600;line-height: 15px;letter-spacing: 0.02em;text-align: left;color: #FFFFFF;
+}
+.name1grey{
+font-size: 12px;font-weight: 600;line-height: 15px;letter-spacing: 0.02em;text-align: left;color: #000;
+}
+.time{
+font-size: 6px;font-weight: 500;line-height: 7px;letter-spacing: 0.02em;text-align: left;color: #FFFFFF;
+}
+.timegrey{
+font-size: 6px;font-weight: 500;line-height: 7px;letter-spacing: 0.02em;text-align: left;color: #A8A8A8;
+}
+.msgboxme{
+font-size: 14px;font-weight: 600;line-height: 17px;letter-spacing: 0.05em;text-align: left;color: #FFFFFF;float: right;border-radius: 15px 0px 15px 15px;
+}
+.move-right{
+    display: flex;flex-direction: row-reverse;column-gap: 10px;align-items: flex-start;justify-content: flex-start;
+}
+.chat-container {
+    max-width: 100%;overflow: hidden;min-height: 45vh;  
+    overflow-y: hidden;
+}
+.chat-messages {
+    max-height: auto;overflow-y: auto; padding: 10px;display: flex;flex-direction: column;height: 100%;
+}
+.user-message {
+    background-color: #2D2B70;color: white;align-self: flex-end;border-radius:15px 0px 15px 15px;
+font-size: 12px;line-height: 17px;letter-spacing: 0.05em;max-width: 70%;line-break: anywhere;
+}
+.bot-message {
+background-color: #2D2B70;color: white; align-self: flex-start;border-radius:0px 15px 15px 15px;
+font-size: 12px;line-height: 17px;letter-spacing: 0.05em;max-width: 70%;line-break: anywhere;
+}
+.usermessagetime{
+font-size: 10px;font-weight: 500;line-height: 12px;letter-spacing: 0em;text-align: right;
+}
+.botmessagetime{
+font-size: 10px;font-weight: 500;line-height: 12px;letter-spacing: 0em;text-align: left;
+}
+.sendbutton{
+    height: 40px;width: 40px;border: none;background-color: #8AC53F; border-radius: 50%;
+}
+.chat-messages::-webkit-scrollbar{
+    display: none;
+}
+
+.chat-list{
+    overflow: scroll;
+    height: 98vh;
+    width: 100%;
+}
+.chat-list::-webkit-scrollbar {
+    display: none;
+  }
+@media only screen and (max-width: 500px){
+    .chat-list{
+        overflow: scroll;
+        height: 90vh;
+    }
+}
+.slide-in {
+    transform: translateX(0%);
+    transition: transform 1.3s ease-in;
+  }
+  
+.slide-out {
+    transform: translateX(-100%);
+    transition: transform 1.3s ease-out;
+}
+
+.batch{
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+    color: white;
+    background-color: #8AC53F;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.connect-btn{
+    background: #8AC53F;
+    color: white;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 15px;
+    border: none;
+}
+.range-slider{
+    height: 20px;
+}
+.range{
+    width:250px;
+    height:16px;
+    border-radius:15px;
+    background-image: linear-gradient(to right, #8AC53F 50%,#D9D9D9 50%);
+}
+#loading-dot {
+    width: 70px;
+    height: 75px;
+    background-image: radial-gradient(circle, #EBE421 50%, transparent 50%), radial-gradient(circle, #EBE421 50%, transparent 50%), radial-gradient(circle, #EBE421 50%, transparent 50%);
+    background-size: 15px 15px;
+    background-position: 0% 50%, 50% 50%, 100% 50%;
+    background-repeat: no-repeat;
+    animation: loading 1s infinite;
+}
+  
+  @keyframes loading {
+    0%, 33.34%, 66.68%, 100% {
+      background-position: 0% 50%, 50% 50%, 100% 50%;
+    }
+    16.67% {
+      background-position: 0% 20%, 50% 50%, 100% 50%;
+    }
+    50.01% {
+      background-position: 0% 50%, 50% 20%, 100% 50%;
+    }
+    83.35% {
+      background-position: 0% 50%, 50% 50%, 100% 20%;
+    }
+  }
+
+.position-fix{
+    position: sticky;
+    bottom: 0;
+    z-index: 999;
+    background-color: white;
+}
+.line-tag{
+    position: absolute;
+    border-bottom: 4px solid #2D2B70;
+    width: 235px;
+    transform: rotate(0deg);
+    margin-top: 20px;
+    left: -195px;
+    z-index: 0;
+}
+
+.step-item:first-child .line-tag{
+    width: 0px;
+    transform: rotate(90deg);
+}
+.step-item:nth-child(2) .line-tag{
+    left: -15px
+}
+/* .step-item:last-child .line-tag{
+    position: absolute;
+    border-bottom: 1px solid #2D2B70;
+    width: 0px;
+    transform: rotate(90deg);
+    margin-top: 20px;
+    left: -95px;
+    z-index: -1;
+} */
+
+.step-item {
+    position: relative;
+}
+
+.step-number {
+    background-color: grey;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    position: absolute;
+    top: 12px;
+    left:20px;
+    z-index: 1;
+}
+.step-number.active {
+    background-color: #8A40E9;
+}
+
+.rbc-date-cell.rbc-now button{
+    
+    background: #8A40E9;
+    color: white;
+    border-radius: 30px;
+}
+.rbc-month-view {
+
+    border: none !important;
+    
+}
+.rbc-day-bg + .rbc-day-bg {
+    border-left: none !important;
+}
+
+.rbc-month-row + .rbc-month-row {
+    border-top:none !important;
+}
+.rbc-date-cell {
+    
+    text-align: center;
+}
+.rbc-month-row {
+    justify-content: center;
+}
+.rbc-off-range-bg {
+    background: #ffffff !important;
+}
+.rbc-today {
+    background-color: #ffffff !important;
+}
+.rbc-button-link {
+    width: 40px;
+    height: 40px;
+}
+/* .rbc-row + .rbc-row{
+position: relative;
+top:-24px;
+}
+.rbc-event-content{
+    display: none !important;
+} */
+.rbc-btn-group ~ button{
+    border: none !important;
+}
+.eventhover:hover{
+    background-color: #2D2B70;
+}
+.eventhover{
+     height: 70px
+}
+.eventhovertext{
+    font-size:14px;
+    font-weight:600;
+    color:#fff;
+}
+.eventhovertext1{
+    font-size:10px;
+    font-weight:400;
+    color:#ffff;
+}
+.colback{
+        background:#A77AE1;
+        transition: 0.2s ease-in-out;
+}
+.colback:hover{
+    background: #783DC3;
+}
+.dateback{
+    color:black;
+    font-size: 13px;
+    font-weight: 500;
+}
+.event-list::-webkit-scrollbar {
+    display: none;
+  }
+  .fontsize{
+    font-size: 12px;
+  }

@@ -1,0 +1,13 @@
+module.exports = {
+// Developer
+// SICKEY :"sk_test_51NuAmESEOguHpfnqjbVdl7UGquuiitDOyVcPaY8qukepDP6PJIfI7fr5i78UcIL0e5Z1g8zoYiGSWcR7oEdEjf2e00AZ9km0nr",
+// STRIPEKEY :"pk_test_51NuAmESEOguHpfnq4y9Pfs1UhXBVPBurTEetxzepYd7DN8dKi1iofjYlkriJkTJm0lifaD3iMZ4RVFgDRrWVX6y300ejJlh50w"
+
+// Malar
+// SICKEY :"sk_test_51LysOvSID3R2BN5HU0tccJSMHBXPuMjrQp2CWvEqYyP0kG8gVmhK1tzbI7VYH34bCpSGMAFi0cUJLsSPCO36zNic00u8pLbIEi",
+// STRIPEKEY : "pk_test_51LysOvSID3R2BN5HZ9POTwgKExOpaKUKuRvogl7mBQTSwdyTKjiqqoiitIlfV5BnWz0hLxbNUyMIwHoHeU5MPceP00OUCvACpw"
+
+// Durai
+SICKEY :"sk_test_51Hyg8VJvdL8Ew6kkOub7FEE2akzzSwKRIOPhxKZHJRQCv2lB9lqwarhRM7MiCKZnYv0XaI33GAt1DPGk7xzt71Of00g0qamLQd",
+STRIPEKEY :"pk_test_51Hyg8VJvdL8Ew6kkPQZZJ4uoNWfPNLM333RwPsvN6FE4IxMjrcqOA3UpwTXMhehInHQJSR21z1Z6jbijI14kosX6002BknepjO"
+}

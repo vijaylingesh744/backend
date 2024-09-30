@@ -1,0 +1,37 @@
+.line-tag{
+    position: absolute;
+    border-bottom: 4px solid #2D2B70;
+    width: 250px;
+    transform: rotate(0deg);
+    margin-top: 20px;
+    left: -215px;
+    z-index: 0;
+}
+
+.step-item:first-child .line-tag{
+    width: 0px;
+    transform: rotate(90deg);
+}
+.step-item:nth-child(2) .line-tag{
+    left: -15px
+}
+.step-item{
+    position:relative;
+}
+.step-number{
+    background-color:grey;
+    color:white;
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    position: absolute;
+    top:12px;
+    left:20px;
+    z-index: 1;
+}
+.step-number.active {
+    background-color: #8A40E9;
+}

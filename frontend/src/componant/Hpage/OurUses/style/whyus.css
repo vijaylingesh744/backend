@@ -1,0 +1,42 @@
+.rotate-on-hover {
+    transition: transform 0.5s ease-in-out;
+}
+  
+  .rotate-on-hover:hover {
+    transform: scale(1.15);
+}
+
+.rotate-on-hover:hover + .country-text {
+    font-weight: bold;
+    transition: font-weight 0.5s ease-in-out; /* Transition for the font-weight change */
+
+  }
+
+  .full-height-lg {
+    height: auto;
+  }
+  
+  @media (min-width: 540px) {
+    .full-height-lg {
+      height: 100vh;
+    }
+    .cardwidth{
+      width: 90px;
+      height:90px
+    }
+  }
+  .cardwidth{
+    width: 95px;
+    height:95px
+  }
+  @media screen and (min-width:1349px) {
+    
+    .cardwidth{
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  .column-gap-4{
+    column-gap: 2rem;
+  }

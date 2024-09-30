@@ -1,0 +1,99 @@
+.swal2-cancel-logout-custom {
+  border-radius: 20px !important;
+  height: 40px;
+  border: 1px solid red !important;
+  background: white !important;
+  background-color: white !important;
+  color: red !important;
+  padding: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.swal2-confirm-logout-custom {
+  border-radius: 20px !important;
+  height: 40px;
+  background: #2A1F81 !important;
+  background-color: #2A1F81 !important;
+  color: white !important;
+  padding: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.swal2-actions {
+  flex-direction: row-reverse;
+}
+
+.swal2-confirm-custom {
+  border-radius: 20px !important;
+  height: 40px;
+}
+
+.swal2-cancel-custom {
+  border-radius: 20px !important;
+  height: 40px;
+}
+
+.swal2-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+div:where(.swal2-icon) {
+  border: none !important;
+}
+
+div:where(.swal2-container) div:where(.swal2-popup) {
+  display: none;
+  position: relative;
+  box-sizing: border-box;
+  grid-template-columns: minmax(0, 100%);
+  width: 24em;
+  max-width: 100%;
+  padding: 0 0 1.25em;
+  border: none;
+  border-radius: 5px;
+  background: #fff;
+  color: #545454;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.swal2-popup-custom {
+  width: 25em !important;
+  /* Important to override default styles */
+}
+
+.actives1 {
+  color: #4535C1;
+  border-top: 2px solid #4535C1;
+}
+
+.actives {
+  color: #4535C1;
+  border-top: 2px solid #4535C1;
+}
+
+.activestop {
+  color: #4535C1 !important;
+  border-bottom: 2px solid #4535C1;
+}
+
+.activestop1 {
+  color: #4535C1 !important;
+  border-bottom: 2px solid #4535C1;
+}
+
+.notactivestop {
+  border-bottom: 2px solid #ffffff;
+}
+
+.navactive {
+  color: #4535C1;
+}
+
+.navactive1 {
+  color: #4535C1;
+}

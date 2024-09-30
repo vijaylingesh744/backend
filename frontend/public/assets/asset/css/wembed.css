@@ -1,0 +1,57 @@
+[data-particles-image='canvasWrapper'] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.35s ease-in-out;
+}
+
+[data-particles-image='holder'] {
+    position: fixed;
+    z-index: 1;
+    top: 20%;
+    right: 8%;
+    width: 20%;
+    opacity: 0;
+}
+
+[data-particles-image='holder']::before {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+    width: 100%;
+}
+
+[data-particles-image='dumb'] {
+    width: 100%;
+    height: 80vh;
+}
+
+[data-particles-image='scrollFrom'] {
+    width: 100%;
+    height: 3px;
+    z-index: 1;
+    opacity: 0;
+}
+
+[data-particles-image='scrollTo'] {
+    width: 100%;
+    height: 3px;
+    z-index: 1;
+    opacity: 0;
+}
+
+@media only screen and (max-width: 991px) {
+    [data-particles-image='holder'] {
+        top: 30%;
+        right: 50% !important;
+        width: 55%;
+    }
+
+    [data-particles-image="canvasWrapper"] {
+        opacity: 0.3 !important;
+    }
+}

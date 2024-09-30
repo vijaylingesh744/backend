@@ -1,0 +1,14 @@
+.hoverer:hover{
+    background-color: #4535C1;
+    color: white;
+}
+
+.hoverer{
+        width: "fit-content";
+        color: "#4535C1";
+        border: "1px solid #4535C1";
+        background: "#ffffff";
+        flex-direction:"row";
+        column-gap: 10;
+        border-radius: 20,
+}

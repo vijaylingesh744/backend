@@ -1,0 +1,135 @@
+/* 
+  :root {
+    --hue: 223;
+    --bg: hsl(var(--hue), 90%, 95%);
+    --fg: hsl(var(--hue), 90%, 5%);
+    --trans-dur: 0.3s;
+  }
+
+  .ip {
+    width: 16em;
+    height: 8em;
+  }
+  .ip__track {
+    stroke: hsl(var(--hue), 90%, 90%);
+    transition: stroke var(--trans-dur);
+  }
+  .ip__worm1,
+  .ip__worm2 {
+    animation: worm1 2s linear infinite;
+  }
+  .ip__worm2 {
+    animation-name: worm2;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: hsl(var(--hue), 90%, 5%);
+      --fg: hsl(var(--hue), 90%, 95%);
+    }
+    .ip__track {
+      stroke: hsl(var(--hue), 90%, 15%);
+    }
+  }
+  
+  @keyframes worm1 {
+    from {
+      stroke-dashoffset: 0;
+    }
+    50% {
+      animation-timing-function: steps(1);
+      stroke-dashoffset: -358;
+    }
+    50.01% {
+      animation-timing-function: linear;
+      stroke-dashoffset: 358;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes worm2 {
+    from {
+      stroke-dashoffset: 358;
+    }
+    50% {
+      stroke-dashoffset: 0;
+    }
+    to {
+      stroke-dashoffset: -358;
+    }
+  }
+   */
+
+   /* $width: 100px;
+$height: 100px; */
+
+/* body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #f5f5f5;
+}
+ */
+.container-loader{
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  vertical-align: middle;
+  /* margin: 20% auto; */
+}
+
+.fa-linkedin{
+  display: block;
+  font-size: 5em;
+  text-align: center;
+  /* color: #0077B5; */
+  color: #4535C1;
+}
+
+.line{
+  height: 3px;
+  width: 100%;
+  background: #e8e8e8;
+  margin-top: 15%;
+  
+}
+.inner{
+  width: 100%;
+  height: inherit;
+  /* background: #0077B5; */
+  background: #4535C1;
+  animation: slide 2s ease-in-out infinite;
+}
+
+@keyframes slide{
+  0%{
+    transform-origin: left;
+    transform: scalex(0.3);
+  }
+
+  25%{
+    transform-origin: left;
+    transform: scalex(1);
+  }
+  26%{
+    transform-origin: right;
+    transform: scalex(1);
+  }
+  50%{
+    transform-origin: right;
+    transform: scalex(0.3);
+  }
+  75%{
+    transform-origin: right;
+    transform: scalex(1);
+  }
+  76%{
+    transform-origin: left;
+    transform: scalex(1);
+  }
+  100%{
+    transform-origin: left;
+    transform: scalex(0.3);
+  }
+}

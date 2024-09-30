@@ -1,0 +1,34 @@
+.textselect{
+    color:blueviolet;
+    font-size: 16px;
+    font-weight: 600;
+}
+.textselect1{
+    color:#646464;
+    font-size: 14px;
+    font-weight: 400;
+}
+.Boxtext{
+    font-size: 18px;
+    font-weight: 600;
+    /* color: #BDBDBD; */
+}
+.x-mark{
+    position: absolute;
+    right: 20px;
+  }
+  .modal-alert{
+    position: relative;
+  }
+  .modal-sm-gl{
+    position: relative;
+  }
+  .w-90{
+    width: 90%;
+  }
+  @media screen and (max-width:540px) {
+    
+    .w-sm-90{
+      width: 90% !important;
+    }
+  }

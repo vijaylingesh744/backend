@@ -1,0 +1,116 @@
+.backgroundimg{
+        min-height:100vh;
+        height: auto;
+        width:100%;
+        background-size:cover;
+        background-color: #ffffff;
+}
+
+.floating-image {
+        left: 15%;
+        top: 7%;
+        position: relative;
+        animation: floatUpDown 4s ease-in-out infinite; /* Adjust timing and animation type as needed */
+      }
+      .floating-image img{
+        width:210px
+      }
+      .floating-image1 img{
+        width:210px
+      }
+      @media screen and (min-width:290px) and (max-width:540px) {
+        .floating-image {
+          left: 0px;
+          position: relative;
+          animation: floatUpDown 4s ease-in-out infinite; /* Adjust timing and animation type as needed */
+        }
+        .floating-image img{
+          width:230px
+        }
+
+      }
+      
+      /* @keyframes floatUpDown {
+        0%, 100% {
+          transform: translateY(20px);
+        }
+        50% {
+          transform: translateY(-20px); /* Adjust the floating height 
+        }
+      } */
+.floating-image1 {
+        position: relative;
+        top: -7%;
+        animation: floatUpDown1 4s ease-in-out infinite; /* Adjust timing and animation type as needed */
+      }
+      
+      /* @keyframes floatUpDown1 {
+        0%, 100% {
+          transform: translateY(-20px);
+        }
+        50% {
+          transform: translateY(20px); /* Adjust the floating height
+        }
+      } */
+
+      .rounded-1{
+        border-radius: 50px !important;
+      }
+      .w-90{
+        width:90%
+      }
+      .button-54 {
+        font-size: 16px !important;
+        font-weight: 200 !important;
+        letter-spacing: 1px !important;
+        padding: 13px 20px 13px !important;
+        outline: 0 !important;
+        border: 1px solid white !important;
+        cursor: pointer !important;
+        position: relative !important;
+        background-color: rgba(0, 0, 0, 0) !important;
+        user-select: none !important;
+        -webkit-user-select: none !important;
+        touch-action: manipulation !important;
+      }
+      
+      .button-54:after {
+        content: "Join now" !important;
+        background-color: white !important;
+        width: 100% !important;
+        z-index: -1 !important;
+        position: absolute !important;
+        height: 100% !important;
+        top: -10px !important;
+        left: 10px !important;
+        transition: 0.3s ease-in !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 600;
+        font-family:'poppins';
+          color:black
+      }
+      
+      .button-54:hover:after {
+        top: 0px !important;
+        left: 0px !important;
+      }
+      
+      @media (min-width: 768px) {
+        .button-54 {
+          padding: 13px 50px 13px;
+        }
+      }
+      .gap-3{
+        column-gap: 1rem;
+        row-gap: 1rem;
+      }
+
+      @media screen and (max-width:540px) {
+        
+        .w-sm-100{
+          width: 100% !important;
+        }
+      }

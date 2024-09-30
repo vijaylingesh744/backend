@@ -1,0 +1,51 @@
+.my-image {
+    /* transition: transform 0.5s ease; */
+    /* transform: translate(550px; 0px); */
+    /* margin-left: 100px; */
+}
+/*   
+.slideLeft {
+} */
+
+.contentpara{
+        padding: 0px 25px;
+        letter-spacing: 0.1px;
+        text-align: justify;
+        /* font-family: 'Lato'; */
+        line-height: 28px;
+        font-size:18px;
+        /* font-weight: 600; */
+        color: white;
+}
+.contenthead{
+        letter-spacing: 0.5px;
+        /* font-family: sans-serif !important; */
+}
+/* .scroller-div{
+    width: '250%';
+    height: '100vh';
+    display: 'flex';
+} */
+
+/* .scroll-container{
+    scroll-snap-type: y mandatory;
+} */
+.scroll-container > * {
+    /* scroll-snap-align: start; */
+  }
+  /* .parallax-container {
+    background-size: cover;
+    height: 100vh;
+    background-image: url('../../../../public/assets/bg-image/network.png');
+  } */
+  .details{
+    height: "100vh";
+    display: "flex";
+    flex-direction: "column";
+    justify-Content: "center";
+    width: "40vw";
+    margin-left: "auto";
+    color: "#000";
+    font-size: "3rem";
+    font-weight: 900;
+}

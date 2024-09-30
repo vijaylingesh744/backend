@@ -1,0 +1,59 @@
+/* SectionScroll.css
+
+.scroll-container{
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    scroll-snap-type: y mandatory;
+}
+  
+.mockup{
+    scroll-snap-align: center;
+} */
+
+/* <button class="button-52" role="button">Button 52</button> */
+
+/* CSS */
+.button-52 {
+  font-size: 16px !important;
+  font-weight: 200 !important;
+  letter-spacing: 1px !important;
+  padding: 13px 20px 13px !important;
+  outline: 0 !important;
+  border: 1px solid white !important;
+  cursor: pointer !important;
+  position: relative !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  touch-action: manipulation !important;
+}
+
+.button-52:after {
+  content: "Join now" !important;
+  background-color: white !important;
+  width: 100% !important;
+  z-index: -1 !important;
+  position: absolute !important;
+  height: 100% !important;
+  top: -10px !important;
+  left: 10px !important;
+  transition: 0.3s ease-in !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  font-family:'poppins';
+    color:black
+}
+
+.button-52:hover:after {
+  top: 0px !important;
+  left: 0px !important;
+}
+
+@media (min-width: 768px) {
+  .button-52 {
+    padding: 13px 50px 13px;
+  }
+}

@@ -1,0 +1,281 @@
+
+
+.outlined-input {
+    position: relative;
+}
+
+.outlined-input input {
+    color: black;
+    height: 2.5rem;
+    padding-left: 20px;
+    font-size: 15px;
+}
+.outlined-input textarea {
+    color: black;
+    height: 2.5rem;
+    padding-left: 20px;
+    font-size: 15px;
+}
+.outlined-input select {
+    color: black;
+    height: 2.5rem;
+    padding-left: 20px;
+    font-size: 15px;
+    width: 100%;
+}
+
+
+.outlined-input label {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    background-color: white;
+    color: var(--placeholder);
+    text-align: center;
+    transition: .5s var(--main-ease);
+    font-size: var(--content1);
+    pointer-events: none;
+    padding: 0px 5px;
+}
+.title-proof{
+    position: absolute;
+    top: 3%;
+    left: 10%;
+    transform: translateY(-50%);
+    background-color: white;
+    color: #1C1B1F;
+    text-align: center;
+    transition: .5s var(--main-ease);
+    font-size: 14px;
+    pointer-events: none;
+    padding: 0px 5px;
+}
+
+.outlined-input input:not(:placeholder-shown) ~ label,
+.outlined-input input:focus ~ label {
+    top: 0px;
+    left: 25px;
+    font-size: var(--content2);
+}
+.outlined-input select:not(:placeholder-shown) ~ label,
+.outlined-input select:focus ~ label {
+    top: 0px;
+    left: 25px;
+    font-size: var(--content2);
+}
+.outlined-input textarea:not(:placeholder-shown) ~ label,
+.outlined-input textarea:focus ~ label {
+    top: 0px;
+    left: 25px;
+    font-size: var(--content2);
+}
+
+.btn-connect {
+    background-color: #4535C1;
+    color:white;
+
+}
+
+.outlined-input input:focus ~ label {
+    color: #4535C1 !important;
+    transition: 0.5s ease;
+}
+.outlined-input textarea:focus ~ label {
+    color: #4535C1 !important;
+    transition: 0.5s ease;
+}
+.title-proof label {
+    color: #4535C1 !important; 
+}
+
+.circle-rounded{
+    border: 1px solid grey;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+}
+.circle-rounded:hover{
+    border: 2px solid green;
+}
+.circle-rounded.active{
+    border: 2px solid green;
+}
+.circle-rounded.active img{
+    filter: brightness(0.5);
+}
+.uploadbutton{
+    width: 100px;
+}
+.scroll::-webkit-scrollbar{
+    display: none;
+}
+.colorimage{
+        /* Specify the gradient */
+      /* background: radial-gradient(circle at center, #8A40E9 0, #793DC6, #592C92 64%) */
+      background: radial-gradient(white,#D3D3D3 );
+      
+}
+.options::-webkit-scrollbar{
+    display: none;
+}
+input:disabled {
+    background-color: white;
+    border:0.1px solid gray;
+  }
+
+  .fonttitle {
+    font-weight: bold;
+  }
+  .uploadimg{
+    margin-top: 20px;
+  }
+  .otp-input{
+    width:35px !important;
+    border: none;
+    border-bottom:2.5px solid #adadad;
+    /* margin-right:15px; */
+    margin: 0px 15px 30px 15px;
+   /* padding: 0px 10px; */
+  }
+
+ /* -------flag dropdown style------ */
+ .custom-dropdown {
+    position: relative;
+   
+  }
+  
+  .dropdown-header {
+    width: 100%;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 2px;
+    padding-right: 10px;
+    height: 2.5rem;
+    border: 0.1px solid gray;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 14px;
+  }
+  .dropdown-header1 {
+    width: 100%;
+    /* margin-left: 5.5%; */
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 2px;
+    padding-right: 10px;
+    height: 2.5rem;
+    border: 0.1px solid gray;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 14px;
+  }
+  
+  .dropdown-arrow {
+    color: gray !important;
+    font-size: 8px;
+  }
+  
+  .dropdown-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: 1px solid #ccc;
+    background: #fff;
+    z-index: 1000;
+    width: 100px;
+    max-height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-left: 17px;
+    border-radius: 5px;
+  }
+  
+  .dropdown-list::-webkit-scrollbar {
+    width: 4px; 
+    
+  }
+  
+  .dropdown-list::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+   
+  }
+  
+  .dropdown-list::-webkit-scrollbar-thumb {
+    /* background: #888;  */
+    background-color: #4535C1;
+    border-radius: 10px; 
+    height: 40px;
+  }
+  .dropdown-item {
+    
+    /* background-color: #f0f0f0; */
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    
+
+    font-size:14px;
+    padding:0px 2px;
+    border-bottom:0.5px solid #ece8e8;
+    font-weight:500;
+    
+  }
+  .dropdown-item:hover{
+    background-color: #a8e25c !important;
+    color: white;
+   
+    /* border-bottom: 0.5px solid white !important; */
+  }
+  .dropdown-item img {
+    margin-right: 10px;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+::file-selector-button {
+  display: none;
+}
+::-webkit-file-upload-button {
+   display: none;
+}
+input#file {
+  display: inline-block;
+  width: 100%;
+  padding: 120px 0 0 0;
+  height: 100px;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url('https://cdn1.iconfinder.com/data/icons/hawcons/32/698394-icon-130-cloud-upload-512.png') center center no-repeat #fff;
+  border-radius: 10px;
+  background-size: 60px 60px;
+}
+.px-sm-0{
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}

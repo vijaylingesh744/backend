@@ -1,0 +1,215 @@
+.image {
+  height: 100vh;
+}
+
+.paralax {
+  object-fit: revert;
+}
+.h1tag {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  top: 50%;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 150px !important;
+  color: #fff;
+  font-weight: 700;
+}
+.boxP {
+  top: 40px;
+  opacity: 0.9;
+}
+.boxP p {
+  padding: 0px 45px;
+  letter-spacing: 0.2px;
+  text-align: justify;
+  /* font-family: Helvetica; */
+  line-height: 35px;
+  font-size: 18px;
+  /* font-weight: 600; */
+}
+
+.tap-1 {
+  z-index: 3;
+  width: 105%;
+  margin-top: auto;
+  margin-bottom: auto;
+  position: absolute;
+  top: 22%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+.tap-1 {
+  height: 6.25rem;
+  position: relative;
+}
+.tap-2 {
+  height: 6.25rem;
+  position: relative;
+}
+.tap-2 {
+  z-index: 2;
+  width: 105%;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: -0.625rem;
+  display: block;
+  position: absolute;
+  top: 0%;
+  bottom: 10%;
+  left: 0%;
+  right: 0%;
+}
+.tape-wrapper.is-1 {
+  /* background-image: linear-gradient(93deg, #38040e, #640 70%); */
+  background-image: linear-gradient(93deg, #0c5995, #344561 70%);
+  margin-left: -0.625rem;
+  position: relative;
+  transform: rotate(4deg);
+  box-shadow: 1px 1px 0.75remrgba (0, 0, 0, 0.25);
+}
+.tape-wrapper {
+  height: 100%;
+  background-image: linear-gradient(93deg, #38040e, #640d 70%);
+  align-items: center;
+  display: flex;
+  transform: rotate(-5deg);
+}
+.scroll {
+  animation: scroll 25s linear infinite;
+}
+.tape-item {
+  display: flex;
+}
+.tape-text {
+  color: white;
+  white-space: nowrap;
+  justify-content: flex-start;
+  padding-left: 0.3125rem;
+  padding-right: 0.3125rem;
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+}
+.tape-span {
+  background-image: url("https://uploads-ssl.webflow.com/634d877…/634d877…_tape-dot.svg");
+  background-position: 90%;
+  background-repeat: no-repeat;
+  background-size: auto;
+  padding-right: 2.875rem;
+  display: block;
+}
+
+.tape-wrapper.is-2 {
+  position: relative;
+  transform: rotate(-4deg);
+}
+.tape-wrapper {
+  height: 100%;
+  /* background-image: linear-gradient(93deg, #38040e, #640d 70%); */
+  background-image: linear-gradient(93deg, #0c5995, #344561 70%);
+  align-items: center;
+  display: flex;
+  transform: rotate(-5deg);
+}
+.home_tapes-component {
+  width: 100%;
+  height: 30vh;
+  margin-bottom: 8.125rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 60;
+  height: 12.75rem;
+  background-image: linear-gradient(transparent 50%, #31304D 50%);
+  margin-bottom: 0px;
+  top: 3rem;
+}
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 1rem));
+  }
+}
+
+.scroll {
+  animation: scroll 30s linear infinite;
+}
+.pad-style {
+  padding-top: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcomeContent{
+  color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    text-align: justify;
+}
+.webcontent{
+  width: 100%;
+  height:100vh;
+  /* background: #2b110e */
+  /* background: #2b1e0e */
+  /* background: #344A61 */
+  /* background: #2F3F4F */
+  /* background: #644e5b */
+  /* background: #244855 */
+  /* background: #6C5F5B */
+  background: #31304D
+}
+@media screen and (max-width: 540px) {
+  .boxP p {
+    padding: 0px 0px;
+    letter-spacing: 0.6px;
+    text-align: justify;
+    /* font-family: Helvetica; */
+    line-height: 35px;
+    font-size: 18px;
+    /* font-weight: 600; */
+  }
+  .home_tapes-component {
+    width: 100%;
+    height: 30vh;
+    margin-bottom: 8.125rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 60;
+    height: 12.75rem;
+    /* background-image: linear-gradient(transparent 50%, #2b1e0e 50%); */
+    /* background-image: linear-gradient(transparent 50%, #2F3F4F 50%); */
+    margin-bottom: 0px;
+    top: 0rem;
+  }
+  .pad-style {
+    padding-top: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .tap-1{
+    top:20%
+  }
+  .tap-2{
+    bottom: 10%;
+  }
+  .welcomeContent{
+    color: white;
+      font-size: 18px;
+      letter-spacing: 1px;
+      line-height: 28px;
+      text-align: justify;
+  }
+  .webcontent{
+    width: 100%;
+    height:125vh;
+    /* background: #2b110e */
+  }
+}

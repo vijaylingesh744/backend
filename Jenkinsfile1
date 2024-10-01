@@ -1,0 +1,92 @@
+pipeline {
+    agent any
+
+   // environment {
+        // Define Node.js versions for front-end and back-end
+     //   NODEJS_FRONTEND = 'node-v16'  // Example NodeJS version for React frontend
+     //   NODEJS_BACKEND = 'node-v14'   // Example NodeJS version for backend (Node.js app)
+   // }
+
+//    stages {
+        // Clone the codebase
+      //  stage('Clone Repositories') {
+          //  steps {
+            //    git url: 'https://github.com/your-frontend-repo-url.git', branch: 'main'
+           //     git url: 'https://github.com/your-backend-repo-url.git', branch: 'main'
+         //   }
+       // }
+
+        // Frontend Build
+        stage('Install Frontend Dependencies') {
+            steps {
+                script {
+                    nodejs(NODEJS_FRONTEND) {
+                        dir('frontend') { // Assuming frontend code is in 'frontend' directory
+                            sh 'npm install firebase@latest --force'
+                        }
+                    }
+                }
+            }
+        }
+
+        stage('Build Frontend') {
+            steps {
+                script {
+                    nodejs(NODEJS_FRONTEND) {
+                        dir('frontend') {
+                            sh 'npm run build'  // Command for building the React app
+                        }
+                    }
+                }
+            }
+        }
+
+        // Backend Build
+        stage('Install Backend Dependencies') {
+            steps {
+                script {
+                    nodejs(NODEJS_BACKEND) {
+                        dir('backend') { // Assuming backend code is in 'backend' directory
+                            sh 'npm install --force'
+                        }
+                    }
+                }
+            }
+        }
+
+       /* // Test Backend
+        stage('Test Backend') {
+            steps {
+                script {
+                    nodejs(NODEJS_BACKEND) {
+                        dir('backend') {
+                            sh 'npm test'  // Run backend tests
+                        }
+                    }
+                }
+            }
+         }       */
+
+        // Frontend & Backend Deployment
+        stage('Deploy') {
+            steps {
+                script {
+                    // Use your preferred deployment strategy (SSH, FTP, etc.)
+                    // Example: deploy frontend build to a server
+                    sh '''
+                        scp -r frontend/build/ /var/www/connect/
+                    '''
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Pipeline completed successfully.'
+        }
+        failure {
+            echo 'Pipeline failed. Check logs.'
+        }
+    }
+}

@@ -1,0 +1,66 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone Repository') {
+            steps {
+                git 'https://github.com/vijaylingesh744/backend'
+            }
+        }
+
+        stage('Setup Frontend') {
+            steps {
+                script {
+                    // Navigate to the frontend directory
+                    dir('frontend') {
+                        // Install Firebase and build the frontend
+                        sh 'npm install firebase@latest --force'
+                        sh 'CI=false npm run build'
+                    }
+                }
+            }
+        }
+
+        stage('Copy Frontend Build') {
+            steps {
+                script {
+                    // Create directory and copy build files
+                    sh 'mkdir -p /var/www/connect'
+                    sh 'cp -r frontend/build/ /var/www/connect'
+                }
+            }
+        }
+
+        stage('Setup Backend') {
+            steps {
+                script {
+                    // Navigate to the backend directory
+                    dir('backend') {
+                        // Install backend dependencies
+                        sh 'npm install --force'
+                        // Install PM2 globally
+                        sh 'npm install -g pm2'
+                    }
+                }
+            }
+        }
+
+        stage('Start Backend Application') {
+            steps {
+                script {
+                    // Start the backend application using PM2
+                    sh 'pm2 start Server.js'
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Deployment completed successfully!'
+        }
+        failure {
+            echo 'Deployment failed!'
+        }
+    }
+}

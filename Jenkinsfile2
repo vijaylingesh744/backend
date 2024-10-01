@@ -1,0 +1,67 @@
+pipeline {
+    agent any
+
+
+// Frontend Build
+        stage('Install Frontend Dependencies') {
+            steps {
+                script {
+                    nodejs(NODEJS_FRONTEND) {
+                        dir('frontend') {
+                            sh 'npm install firebase@latest --force'
+                        }
+                    }
+                }
+            }
+        }
+
+
+stage('Build Frontend') {
+            steps {
+                script {
+                    nodejs(NODEJS_FRONTEND) {
+                        dir('frontend') {
+                            sh 'npm run build'
+                        }
+                    }
+                }
+            }
+        }
+
+ // Backend Build
+        stage('Install Backend Dependencies') {
+            steps {
+                script {
+                    nodejs(NODEJS_BACKEND) {
+                        def backendDirs = ['backend', 'backend']
+
+                        backendDirs.each { dirName -> 
+                            dir("backend/backend") {
+                                sh 'npm install --force'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+ // Deployment
+        stage('Deploy') {
+            steps {
+                script {
+                    sh 'scp -r frontend/build/ root@3.107.20.167:/var/www/connect/'
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Pipeline completed successfully.'
+        }
+        failure {
+            echo 'Pipeline failed. Check logs.'
+        }
+    }
+}

@@ -34,7 +34,7 @@ pipeline {
                 script {
                     nodejs(NODEJS_FRONTEND) {
                         dir('frontend') {
-                            sh 'npm run build'  // Command for building the React app
+                            sh 'CI=false npm run build'  // Command for building the React app
                         }
                     }
                 }
@@ -74,6 +74,7 @@ pipeline {
                     // Use your preferred deployment strategy (SSH, FTP, etc.)
                     // Example: deploy frontend build to a server
                     sh '''
+                         sh 'mkdir -p /var/www/connect'
                         scp -r frontend/build/ /var/www/connect/
                     '''
                 }

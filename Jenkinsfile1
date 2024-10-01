@@ -1,20 +1,20 @@
 pipeline {
     agent any
 
-   // environment {
+   /* environment {
         // Define Node.js versions for front-end and back-end
-     //   NODEJS_FRONTEND = 'node-v16'  // Example NodeJS version for React frontend
-     //   NODEJS_BACKEND = 'node-v14'   // Example NodeJS version for backend (Node.js app)
-   // }
+        NODEJS_FRONTEND = 'node-v16'  // Example NodeJS version for React frontend
+        NODEJS_BACKEND = 'node-v14'   // Example NodeJS version for backend (Node.js app)
+    }
 
-//    stages {
+   stages {
         // Clone the codebase
-      //  stage('Clone Repositories') {
-          //  steps {
-            //    git url: 'https://github.com/your-frontend-repo-url.git', branch: 'main'
-           //     git url: 'https://github.com/your-backend-repo-url.git', branch: 'main'
-         //   }
-       // }
+        stage('Clone Repositories') {
+            steps {
+                git url: 'https://github.com/your-frontend-repo-url.git', branch: 'main'
+                git url: 'https://github.com/your-backend-repo-url.git', branch: 'main'
+            }
+        } */
 
         // Frontend Build
         stage('Install Frontend Dependencies') {

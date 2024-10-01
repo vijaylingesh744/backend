@@ -1,44 +1,42 @@
-
-
-
-
 pipeline {
     agent any
 
     stages {
         stage('Install Dependencies') {
             steps {
-                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') 
-              
-              dir('frontend')
-              {
-                // Install Node.js dependencies
-               // sh 'npm install --legacy-peer-deps'
-                //sh 'npm install @emotion/react'
-                //sh 'npm install --save-dev @babel/plugin-proposal-private-property-in-object --force'
-                 sh 'npm install react-firebase@latest --force'
+                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+                    dir('frontend') {
+                        // Install Node.js dependencies
+                        // sh 'npm install --legacy-peer-deps'
+                        // sh 'npm install @emotion/react'
+                        // sh 'npm install --save-dev @babel/plugin-proposal-private-property-in-object --force'
+                        sh 'npm install react-firebase@latest --force'
+                    }
                 }
-          }       
+            }
         }
-        /*stage('Lint') {
+
+        /* stage('Lint') {
             steps {
                 // Run ESLint to catch issues
                 sh 'npx eslint src/ --quiet' // --quiet will only show errors
             }
-        }*/
+        } */
+
         stage('Build') {
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS') {
-            script{  
-                // Build the React application
-                //sh 'npm run build'
-                dir('frontend')
-                sh 'CI=false npm run build'
-               }
-             }          
-           }
-         }   
-stage('Copy Files') {
+                    script {
+                        // Build the React application
+                        dir('frontend') {
+                            sh 'CI=false npm run build'
+                        }
+                    }
+                }
+            }
+        }
+
+        stage('Copy Files') {
             steps {
                 // Make sure the destination directory exists
                 sh 'mkdir -p /var/www/connect'
@@ -47,16 +45,15 @@ stage('Copy Files') {
             }
         }
 
-
-      // Backend Build
+        // Backend Build
         stage('Install Backend Dependencies') {
             steps {
                 script {
                     nodejs(NODEJS_BACKEND) {
-                        def backendDirs = ['backend', 'backend']
+                        def backendDirs = ['backend']
 
                         backendDirs.each { dirName -> 
-                            dir("backend/backend") {
+                            dir(dirName) {
                                 sh 'npm install --force'
                             }
                         }
@@ -65,8 +62,7 @@ stage('Copy Files') {
             }
         }
 
-
-       // Start the application using pm2
+        // Start the application using pm2
         stage('Start Application with PM2') {
             steps {
                 script {
@@ -81,8 +77,6 @@ stage('Copy Files') {
                 }
             }
         }
-    }
-
 
         stage('Deploy') {
             steps {
@@ -92,6 +86,7 @@ stage('Copy Files') {
             }
         }
     }
+
     post {
         success {
             echo 'Build and deployment successful!'
@@ -101,3 +96,4 @@ stage('Copy Files') {
         }
     }
 }
+

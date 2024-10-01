@@ -5,7 +5,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
-                    dir('/home/ubuntu/frontend') {
+                    dir('/home/ubuntu/backend/frontend') {
                         // Install Node.js dependencies
                         // sh 'npm install --legacy-peer-deps'
                         // sh 'npm install @emotion/react'
@@ -28,7 +28,7 @@ pipeline {
                 catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS') {
                     script {
                         // Build the React application
-                        dir('/home/ubuntu/frontend') {
+                        dir('/home/ubuntu/backend/frontend') {
                             sh 'CI=false npm run build'
                         }
                     }

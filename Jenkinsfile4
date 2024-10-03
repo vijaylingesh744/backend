@@ -18,6 +18,12 @@ pipeline {
         stage('Setup Frontend') {
             steps {
                 script {
+                        
+                      def user = "root" // Change this to your target user
+                    def commands = 'sudo su ''
+                        echo "Changing to user ${root}..."
+                        sudo -u  root bash -c "
+
                     // Change directory to frontend
                     dir('frontend') {
                         // Install Firebase and force install dependencies

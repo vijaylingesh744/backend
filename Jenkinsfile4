@@ -51,6 +51,15 @@ pipeline {
                         // Install backend dependencies with --force
                         sh 'npm install --force'
 
+                    // Create a directory for global packages
+                    sh 'mkdir -p $HOME/.npm-global'
+                    // Set npm prefix to the new directory
+                    sh 'npm config set prefix "$HOME/.npm-global"'
+                    // Add npm-global/bin to PATH
+                    sh 'echo \'export PATH="$HOME/.npm-global/bin:$PATH"\' >> $HOME/.bashrc'
+                    sh 'source $HOME/.bashrc'  // This may not work in Jenkins
+
+
                         // Install PM2 globally to manage the backend process
                         sh 'npm install -g pm2 --force'
 

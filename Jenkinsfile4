@@ -30,7 +30,7 @@ pipeline {
                         sh 'mkdir -p /var/www/connect'
 
                         // Copy the build output to the /var/www/connect directory
-                        sh 'sudo cp -r build/ /var/www/connect'
+                        sh 'cp -r build/ /var/www/connect'
                     }
                 }
             }

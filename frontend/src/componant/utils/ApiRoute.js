@@ -5,9 +5,9 @@ module.exports = {
   // APIBASE_URL:"https://apiconnect.qcodesinfotech.com/api",
 
   BUSINESS_URL:"http://connect-souq.qcodesinfotech.com/",
-  APIBASE_URL:"https://3.107.20.167/api",
-  BASE_URL:"https://3.107.20.167/",
-  APPURL:"https://3.107.20.167",
+  APIBASE_URL:"https://3.27.202.97/api",
+  BASE_URL:"https://3.27.202.97/",
+  APPURL:"https://3.27.202.97",
 
   // BUSINESS_URL:"http://localhost:3001/",
   // APIBASE_URL:"http://localhost:5000/api",

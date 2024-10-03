@@ -20,7 +20,7 @@ pipeline {
                 script {
                         
                       def user = "root" // Change this to your target user
-                    def commands = 'sudo su ''
+                    def commands = 'sudo su '
                         echo "Changing to user ${root}..."
                         sudo -u  root bash -c "
 

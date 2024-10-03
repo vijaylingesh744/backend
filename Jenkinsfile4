@@ -32,7 +32,7 @@ pipeline {
                         sh 'sudo -s chmod -R 775 /var/www/connect'
 
                         // Copy the build output to the /var/www/connect directory
-                        sh 'sudo cp -R build/ /var/www/connect'
+                        sh 'sudo -s cp -R build/ /var/www/connect'
                     }
                 }
             }

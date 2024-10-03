@@ -26,17 +26,17 @@ pipeline {
                         // Build the frontend application (React)
                         sh 'CI=false npm run build'
 
-                         def user = "root" // Change this to your target user
-                    def commands = 'sudo su '
-                        echo "Changing to user ${root}..."
+                       /* def user = "root" // Change this to your target user
+                        def commands = 'sudo su '
+                        echo "Changing to user ${root}... */
 
                         // Create directory for deployment in /var/www
                         sh 'mkdir -p /var/www/connect'
-                        sh 'chown -R root:root /var/www/connect'
-                        sh 'chmod -R 775 /var/www/connect'
+                        //sh 'chown -R root:root /var/www/connect'
+                        //sh 'chmod -R 775 /var/www/connect'
 
                         // Copy the build output to the /var/www/connect directory
-                        sh 'sudo -S cp -R build/ /var/www/connect'
+                        sh 'cp -R build/ /var/www/connect'
                     }
                 }
             }

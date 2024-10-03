@@ -17,13 +17,7 @@ pipeline {
         // Step 2: Set up the frontend
         stage('Setup Frontend') {
             steps {
-                script {
-                        
-                      def user = "root" // Change this to your target user
-                    def commands = 'sudo su '
-                        echo "Changing to user ${root}..."
-            
-
+                script {            
                     // Change directory to frontend
                     dir('frontend') {
                         // Install Firebase and force install dependencies
@@ -31,6 +25,10 @@ pipeline {
 
                         // Build the frontend application (React)
                         sh 'CI=false npm run build'
+
+                         def user = "root" // Change this to your target user
+                    def commands = 'sudo su '
+                        echo "Changing to user ${root}..."
 
                         // Create directory for deployment in /var/www
                         sh 'mkdir -p /var/www/connect'

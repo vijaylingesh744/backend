@@ -28,8 +28,8 @@ pipeline {
 
                         // Create directory for deployment in /var/www
                         sh 'mkdir -p /var/www/connect'
-                        sh 'sudo chown -R root:root /var/www/connect'
-                        sh 'sudo chmod -R 775 /var/www/connect'
+                        sh 'sudo -s chown -R root:root /var/www/connect'
+                        sh 'sudo -s chmod -R 775 /var/www/connect'
 
                         // Copy the build output to the /var/www/connect directory
                         sh 'sudo cp -R build/ /var/www/connect'

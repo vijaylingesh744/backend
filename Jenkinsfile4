@@ -52,7 +52,7 @@ pipeline {
                         sh 'npm install --force'
 
                         // Install PM2 globally to manage the backend process
-                        sh 'sudo Su- npm install -g pm2'
+                        sh 'npm install -g pm2 --force'
 
                         // Start the backend application using PM2
                         sh 'pm2 start Server.js --name backend-app'

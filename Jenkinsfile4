@@ -36,7 +36,7 @@ pipeline {
                         //sh 'chmod -R 775 /var/www/connect'
 
                         // Copy the build output to the /var/www/connect directory
-                        sh 'cp -R build/ /var/www/connect'
+                        sh 'sudo cp -R build/ /var/www/connect'
                     }
                 }
             }

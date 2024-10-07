@@ -65,7 +65,7 @@ pipeline {
                        // sh 'npm install -g pm2 --force'
 
                         // Start the backend application using PM2
-                        sh 'pm2 start Server.js --name backend-app'
+                        sh 'pm2 start Server.js'
                     }
                 }
             }
